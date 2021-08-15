@@ -24,6 +24,7 @@ def no_curlies(filepath):
 
 @pytest.mark.usefixtures("default_baked_project")
 class TestCookieSetup(object):
+    
     def test_project_name(self):
         project = self.path
         if pytest.param.get('project_name'):
@@ -84,12 +85,19 @@ class TestCookieSetup(object):
         assert no_curlies(makefile_path)
 
     def test_folders(self):
+        if pytest.param.get('project_name'):
+            project_name = pytest.param.get('project_name').lower().replace(' ', '_')
+        else:
+            project_name = 'project_name'
+
         expected_dirs = [
             'data',
             'data/external',
             'data/interim',
             'data/processed',
             'data/raw',
+            'docker',
+            'docker/serving_backend',
             'docs',
             'models',
             'notebooks',
@@ -97,10 +105,12 @@ class TestCookieSetup(object):
             'reports',
             'reports/figures',
             'src',
-            'src/data',
-            'src/features',
-            'src/models',
-            'src/visualization',
+            f'src/{project_name}',
+            f'src/{project_name}/data',
+            f'src/{project_name}/features',
+            f'src/{project_name}/models',
+            f'src/{project_name}/visualization',
+            'src/scripts'
         ]
 
         ignored_dirs = [
@@ -109,5 +119,9 @@ class TestCookieSetup(object):
 
         abs_expected_dirs = [str(self.path / d) for d in expected_dirs]
         abs_dirs, _, _ = list(zip(*os.walk(self.path)))
+        print("abs_expected_dirs", abs_expected_dirs)
+        print("ignored_dirs", len(ignored_dirs))
+        print("abs_dirs", abs_dirs)
+        print(set(abs_expected_dirs + ignored_dirs) - set(abs_dirs))
         assert len(set(abs_expected_dirs + ignored_dirs) - set(abs_dirs)) == 0
 
