@@ -1,4 +1,4 @@
-[] Add ML project score cards
-[] Add project workflow description
-[] Add Experiment Design Blueprint
-[] Create serving example with docker-compose
+- [ ] Add ML project score cards
+- [ ] Add project workflow description
+- [ ] Add Experiment Design Blueprint
+- [ ] Create serving example with docker-compose
