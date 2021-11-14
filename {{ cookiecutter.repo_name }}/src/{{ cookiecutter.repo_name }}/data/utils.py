@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import List
 
 
 def get_all_files_in_path(

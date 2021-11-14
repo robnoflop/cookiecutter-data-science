@@ -10,7 +10,7 @@ def get_datetime_postfix() -> str:
         str: The generate postfix in format yyyymmdd_hhmmss
     """
     return (
-        str(datetime.now)
+        str(datetime.now())
         .replace("-", "")
         .replace(" ", "_")
         .replace(":", "")
