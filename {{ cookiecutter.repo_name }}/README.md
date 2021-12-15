@@ -44,3 +44,22 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+Generate documentation
+----------------------
+
+Windows
+
+```shell
+cd docs
+sphinx-apidoc -el -o {{ cookiecutter.repo_name }}/ ../src/{{ cookiecutter.repo_name }}
+.\make.bat html
+```
+
+Mac/Linux
+
+```shell
+cd docs
+sphinx-apidoc -el -o {{ cookiecutter.repo_name }}/ ../src/{{ cookiecutter.repo_name }}
+make html
+```
