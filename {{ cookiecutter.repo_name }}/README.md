@@ -48,6 +48,8 @@ Project Organization
 Generate documentation
 ----------------------
 
+Theme documentation: https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
+
 Windows
 
 ```shell
@@ -63,3 +65,4 @@ cd docs
 sphinx-apidoc -el -o {{ cookiecutter.repo_name }}/ ../src/{{ cookiecutter.repo_name }}
 make html
 ```
+
