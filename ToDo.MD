@@ -1,4 +1,9 @@
-- [ ] Add ML project score cards
 - [ ] Add project workflow description
 - [ ] Add Experiment Design Blueprint
+- [ ] Add model documentation Template
+    - added cookicutter switch
+- [ ] Add Data Storytelling Template
+- [ ] Add ML project score cards
+    - added cookicutter switch
 - [ ] Create serving example with docker-compose
+    - added mlflow docker image
