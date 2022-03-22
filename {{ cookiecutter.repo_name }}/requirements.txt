@@ -18,6 +18,6 @@ pandas
 icecream
 
 jupyter
-
+tqdm #progress bars
 confuse #used for config loading
 pyarrow #used to read and write parquet files
