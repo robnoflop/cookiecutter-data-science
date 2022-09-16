@@ -6,7 +6,7 @@
 Project Organization
 ------------
 
-{% if cookiecutter.open_source_license == 'MIT' OR cookiecutter.open_source_license == 'BSD-3-Clause' %}
+{% if cookiecutter.open_source_license == 'MIT' or cookiecutter.open_source_license == 'BSD-3-Clause' %}
     ├── LICENSE
 {% endif %}
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
