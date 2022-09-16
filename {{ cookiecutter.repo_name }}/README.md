@@ -31,10 +31,9 @@ Project Organization
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
+    |   ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     |   ├── scripts        <- Scripts that not part of the module
-    |   |
     |   ├── {{ cookiecutter.repo_name }}    <- The module of this project 
     │       ├── data                        <- Scripts or classes to prepare, analyse or generate data
     │       ├── features                    <- Scripts or classes to turn raw data into features for modeling
@@ -67,5 +66,13 @@ Mac/Linux
 cd docs
 sphinx-apidoc -lfM -d 0 -o drg_analytic/ ../src/drg_analytic
 make html
+```
+
+
+Create package
+--------------
+
+```shell
+python src/setup.py sdist
 ```
 
