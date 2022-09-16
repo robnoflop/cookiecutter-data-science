@@ -1,0 +1,9 @@
+documentation_blueprint:
+  - reports\project_documentation_blueprint.md
+  - reports\model_documentation_blueprint.md
+
+experiment_blueprint:
+  - reports\experiment_blueprint.md
+
+risk_management_report:
+  - reports\risk_management_report.md
