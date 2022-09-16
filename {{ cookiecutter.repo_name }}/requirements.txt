@@ -17,4 +17,8 @@ sklearn
 pandas
 icecream
 
+boto3 #used to connect to S3 like storage and AWS
+s3fs #used to connect to S3 like storage with pandas
+
+
 jupyter
