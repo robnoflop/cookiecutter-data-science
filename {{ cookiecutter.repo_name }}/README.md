@@ -45,6 +45,15 @@ Project Organization
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
+Getting started
+---------------
+python -m venv .venv
+CMD: .venv\Scripts\activate.bat
+PowerShell: .venv/Scripts/Activate.ps1
+Bash: source .venv/bin/activate
+pip install -r requirements.txt
+
+
 Generate documentation
 ----------------------
 
