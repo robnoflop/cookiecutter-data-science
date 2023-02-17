@@ -11,7 +11,11 @@ pydot
 graphviz 
 sphinx-rtd-theme
 coverage
+
+nbstripout
 flake8
+pre-commit
+
 
 sklearn
 pandas
