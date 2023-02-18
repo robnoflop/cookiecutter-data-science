@@ -50,11 +50,10 @@ The directory structure of your new project looks like this:
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+├── pyproject.toml     <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
 ├── src                <- Source code for use in this project.
-|   ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
 |   ├── scripts        <- Scripts that not part of the module
 |   ├── {{ cookiecutter.repo_name }}    <- The module of this project 
 │       ├── data                        <- Scripts or classes to prepare, analyse or generate data

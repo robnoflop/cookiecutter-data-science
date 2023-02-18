@@ -1,4 +1,3 @@
-mkdocs
-mkdocs-cinder
-cookiecutter
-pytest
+cookiecutter==2.1.1
+pytest==7.2.1
+toml-cli==0.3.1
