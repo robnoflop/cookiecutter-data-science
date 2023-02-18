@@ -16,4 +16,3 @@ def get_datetime_postfix() -> str:
         .replace(":", "")
         .split(".")[0]
     )
-
