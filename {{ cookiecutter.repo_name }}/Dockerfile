@@ -9,7 +9,8 @@ RUN poetry config virtualenvs.create false
 RUN poetry install --only main
 
 FROM base as root
-COPY src/mylibcc /app/code/mylibcc
+COPY src/mylibcc /app/code/{{ cookiecutter.repo_name }}
+
 
 FROM root as test
 RUN poetry install --only test
