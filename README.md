@@ -31,7 +31,6 @@ The directory structure of your new project looks like this:
 
 ```
 ├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
 │   ├── external       <- Data from third party sources.
@@ -55,13 +54,37 @@ The directory structure of your new project looks like this:
 │
 ├── src                <- Source code for use in this project.
 |   ├── scripts        <- Scripts that not part of the module
-|   ├── {{ cookiecutter.repo_name }}    <- The module of this project 
-│       ├── data                        <- Scripts or classes to prepare, analyse or generate data
-│       ├── features                    <- Scripts or classes to turn raw data into features for modeling
-│       ├── models                      <- Scripts to train models and then use trained models to make
-│       └── visualization               <- Scripts to create exploratory and results oriented visualizations
-│
+|   ├── {{ cookiecutter.repo_name }}    <- The module of this projectetc.
+│       ├── data                        <- classes to prepare, analyse or generate data
+│       ├── features                    <- classes to turn raw data into features for modeling
+│       ├── models                      <- train models and then use trained models to make
+│       └── visualization               <- create exploratory and results oriented visualizations
+
 ```
+#### data
+It is not a good practice to place alle your project data in this direcorty. Your data should only be stored in a data store in your organization environment. Use this directory only for testing purposes. That means, you can use this directory and all directories within to develop, test or debug your data processing.
+
+#### docs
+As above mentioned the docs directory is a Sphinx project. Use this project to creat a automated code documentation and to document you process, e.g, *Getting Startet*, *Data processing steps*, *Infrstrcuture*, ....
+
+#### models
+If your project is not mature enough and you don't have a centralized model registry use this directory to store models locally. Otherwise delete it.
+
+#### notebooks
+Notebooks are great for data discovery or to validate your hypothesis, but not for more. 
+
+#### references
+
+#### reporsts
+
+
+#### src/{{ cookiecutter.repo_name }} 
+
+Here you place custom preprocessors, data loader, model card plotter, model trainer and explainer, etc. You can see this as you core package of you project. This code has to be well engineered and tested so it can reliability used during data exploration in notebooks, traing and data pipelines or in model serving within a REST API.
+
+#### src/scripts
+
+In this directory you can place everything that glues your standardized code from src/{{ cookiecutter.repo_name }} together. Place your pipline code, frontends like Streamlit or your FastApi for model serving here.
 
 
 ### Installing development requirements

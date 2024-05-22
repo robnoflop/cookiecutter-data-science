@@ -1,34 +1,16 @@
 {
     "project_name": "project_name",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "pkg_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "Your name (or your organization/company/team), format: name <email>",
     "description": "A short description of the project.",
-    "open_source_license": [
-        "Apache-2.0",
-        "BSD-2-Clause",
-        "BSD-3-Clause",
-        "BSD-4-Clause",
-        "GPL-2.0-only",
-        "GPL-2.0-or-later",
-        "GPL-3.0-only",
-        "GPL-3.0-or-later",
-        "LGPL-2.1-only",
-        "LGPL-2.1-or-later",
-        "LGPL-3.0-only",
-        "LGPL-3.0-or-later",
+    "license": [
         "MIT",
+        "Apache-2.0",
+        "BSD-4",
+        "GPL-3.0",
+        "LGPL-3.0",
         "No license file"
-    ],
-    "risk_management_report": [
-        true,
-        false
-    ],
-    "experiment_blueprint": [
-        true,
-        false
-    ],
-    "documentation_blueprint": [
-        true,
-        false
     ]
 }

@@ -61,14 +61,6 @@ class TestCookieSetup(object):
         assert license_path.exists()
         assert no_curlies(license_path)
 
-    def test_license_type(self):
-        pyproject_ = self.path / 'pyproject.toml'
-        args = ['toml', 'get', '--toml-path', str(pyproject_), 'tool.poetry.license']
-        p = check_output(args).decode('ascii').strip()
-        if pytest.param.get('open_source_license'):
-            assert p == 'BSD-3-Clause'
-        else:
-            assert p == 'Apache-2.0'
 
     def test_folders(self):
         if pytest.param.get('project_name'):
